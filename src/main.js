@@ -8,13 +8,14 @@ const movieArrays= [
 ['Black Panther', 'Mad Max: Fury Road', 'King Kong', 'The Adventures of Robin Hood', 'Spider-Man: Homecoming', 'Seven Samurai', 'The Treasure of the Sierra Madre', 'Lawrence of Arabia', 'Captain America: Civil War', 'The Hurt Locker', 'Aliens', 'The Searchers', 'The Terminator', 'The African Queen', 'Once Upon a Time in the West', 'Game of Thrones', 'The Last Kingdom', 'Casino Royale', 'Crouching Tiger, Hidden Dragon', 'Aquaman']];
 
 const moods= document.getElementsByClassName("mood");
-let movieTitle="";
+let selectedMovies=[];
+let dataMoviesProperties={};
 
 for (let i=0; i<moods.length; i++){
     moods[i].addEventListener("click", ()=> {
         const moodValue= parseInt(moods[i].value);
         const arraySelected=movieArrays[moodValue];   
-        movieTitle= window.data.randomMovies(arraySelected);    
+        const movieTitle= window.data.randomMovies(arraySelected);    
         obtainDataJson(movieTitle);    
     })   
 } 
@@ -24,9 +25,18 @@ const obtainDataJson = (title) => {
     fetch('http://www.omdbapi.com/?apikey=2227c3b4&t=' + title + '&type=movie&plot=full')
         .then(response => response.json())
         .then(dataMovies => {
-            console.log(dataMovies);
-        });
-};
+            dataMoviesProperties= {
+                title: dataMovies.Title,
+                director: dataMovies.Director,
+                actors: dataMovies.Actors,
+                plot: dataMovies.Plot,
+                runTime: dataMovies.Runtime,
+                poster: dataMovies.Poster
+            };
+            console.log(dataMoviesProperties);
+            })
+    
+        }
 
 
     
