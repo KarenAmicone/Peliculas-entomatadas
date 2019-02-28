@@ -1,3 +1,7 @@
+const romantic = ['The lunchbox', 'Up in the air', 'Carol', 'The big sick', 'Casablanca', 'Her', 'Shakespeare in Love','About a boy', 'Before sunrise', 'The Hustler', 'The African Queen','The Artist', 'Your Name', 'Enough Said', 'Midnight in Paris', 'The Graduate', 'The Duke of Burgundy', 'Crazy Heart', 'Dave', 'Breathe In'];
+const funny=['Lady Bird','La la land','The Death of Stalin','Crazy Rich Asians','Sorry to Bother You','Bullets Over Broadway','Blindspotting','Old School','O Brother','The Heat','Game Night','Pulp Fiction','The Hangover','Dumb and Dumber','School of Rock', 'Hot Fuzz', 'The Breakfast Club', 'Burn After Reading', 'Bachelorette', 'The Birdcage'];
+const brave=['A Quiet Place', 'It Follows', 'Let the Right One In', 'The Cabin in the Woods', 'A Girl Walks Home Alone at Night', 'The Blair Witch Project', 'The Texas Chainsaw Massacre', 'Night of the Living Dead', 'Bone Tomahawk', 'The Shining', 'Get Out', 'Audition', 'The Thing', 'Evil Dead', 'Funny Games', 'Mulholland Dr.', 'Martyrs', 'The Orphanage', 'Suspiria', 'A Nightmare on Elm Street'];
+const curious=['The Prestige', 'The Game', 'The Kindergarten Teacher', 'The Silence of the Lambs', 'Twelve Monkeys', 'Black Swan', 'Oldboy', 'Primal Fear', 'Red Dragon', 'The Bone Collector', 'Border', 'Overlord', 'The House That Jack Built', 'Missing', 'Side Effects', 'Let Me In', 'The Imitation Game', 'Gerald’s Game', 'The Gift', 'Raw'];
 const kids = ['The Wizard of Oz','Inside Out','E.T. The Extra-Terrestrial',
   'Coco','Paddington 2','Incredibles 2','Snow White and the Seven Dwarfs',
   'Toy Story 2','Up','Toy Story 3','Finding Nemo','Pinocchio','Toy Story',
@@ -23,8 +27,6 @@ const obtainDataJson = (title) => {
      console.log(dataMovies);
   });
 };
-
-
 const titleRandom = window.data.randomMovies(bold);
 console.log(titleRandom);
 console.log(obtainDataJson(titleRandom));
