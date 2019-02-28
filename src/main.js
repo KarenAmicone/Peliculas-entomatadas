@@ -11,6 +11,39 @@ const moods= document.getElementsByClassName("mood");
 let dataMoviesProperties={};
 let selectedMovies = [];
 
+const image= document.getElementById("image");
+
+for (let i=0; i<moods.length; i++){
+    moods[i].addEventListener("click", ()=> {
+        const moodValue= parseInt(moods[i].value);
+        const arraySelected=movieArrays[moodValue];
+        selectedMovies = [];
+        obtainMovies(arraySelected);
+    })
+}
 
 
+const obtainDataJson = (title) => {
+    fetch('http://www.omdbapi.com/?apikey=2227c3b4&t=' + title + '&type=movie&plot=full')
+        .then(response => response.json())
+        .then(dataMovies => {
+            console.log(dataMovies);
+            dataMoviesProperties= {
+                title: dataMovies.Title,
+                director: dataMovies.Director,
+                actors: dataMovies.Actors,
+                plot: dataMovies.Plot,
+                runTime: dataMovies.Runtime,
+                poster: dataMovies.Poster
+            };
+            selectedMovies.push(dataMoviesProperties);
+            })
 
+        }
+
+const obtainMovies = (movieArraySelected) => {
+  for(let i = 0; i < 2; i++){
+    const movieTitle = window.data.randomMovies(movieArraySelected);
+    obtainDataJson(movieTitle);
+  }
+}
