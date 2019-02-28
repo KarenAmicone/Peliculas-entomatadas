@@ -15,9 +15,8 @@ for (let i=0; i<moods.length; i++){
     moods[i].addEventListener("click", ()=> {
         const moodValue= parseInt(moods[i].value);
         const arraySelected=movieArrays[moodValue];
-        // const movieTitle= window.data.randomMovies(arraySelected);
-        // obtainDataJson(movieTitle);
-        selectedMovies = obtainMovies(arraySelected);
+        selectedMovies = [];
+        obtainMovies(arraySelected);
         console.log(selectedMovies);
     })
 }
@@ -36,16 +35,14 @@ const obtainDataJson = (title) => {
                 poster: dataMovies.Poster
             };
             console.log(dataMoviesProperties);
+            selectedMovies.push(dataMoviesProperties);
             })
 
         }
 
 const obtainMovies = (movieArraySelected) => {
-  let selectedMovies = [];
   for(let i = 0; i < 2; i++){
     const movieTitle = window.data.randomMovies(movieArraySelected);
     obtainDataJson(movieTitle)
-    selectedMovies.push(dataMoviesProperties);
   }
-  return selectedMovies;
 }
