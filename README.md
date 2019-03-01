@@ -2,10 +2,10 @@
 
 ## Índice
 
-- [Descripción](#definición_del_producto)
-- [Diseño de la experiencia de usuario](#primera_interación)
-- [Instrucciones para usuarios](#instrucciones_para_usuarios)
-- [Información para desarrolladores](#información_para_desarrolladores)
+- [Descripción](#definición-del-producto)
+- [Diseño de la experiencia de usuario](#primera-interación)
+- [Instrucciones para usuarios](#instrucciones-para-usuarios)
+- [Información para desarrolladores](#información-para-desarrolladores)
 - [Autoras y agradecimientos](#autoras)
 
 
