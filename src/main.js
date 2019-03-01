@@ -6,10 +6,16 @@ const movieArrays= [
 ['The Wizard of Oz', 'Inside Out', 'E.T. The Extra-Terrestrial','Coco', 'Paddington 2', 'Incredibles 2', 'Snow White and the Seven Dwarfs', 'Toy Story 2', 'Up', 'Toy Story 3', 'Finding Nemo', 'Pinocchio', 'Toy Story', 'Mary Poppins', 'How to Train Your Dragon', 'The Incredibles', 'My Life as a Zucchini', 'Song Of The Sea', 'About Elly', 'Spirited Away', '101 Dalmatians'],
 ['The Cabinet of Dr. Caligari', 'Metropolis', 'The Battle of Algiers', 'M', 'Seven Samurai', 'The 400 Blows', 'The Wages of Fear', 'Open City', 'Tokyo Story', 'The Leopard', 'Battleship Potemkin', 'Au Hasard Balthazar', 'The Conformist', 'Let the Right One In', 'Playtime', 'Faces Places', 'Things to Come', 'Only Yesterday', 'Tampopo', 'Three Colors: Red'],
 ['Black Panther', 'Mad Max: Fury Road', 'King Kong', 'The Adventures of Robin Hood', 'Spider-Man: Homecoming', 'Seven Samurai', 'The Treasure of the Sierra Madre', 'Lawrence of Arabia', 'Captain America: Civil War', 'The Hurt Locker', 'Aliens', 'The Searchers', 'The Terminator', 'The African Queen', 'Once Upon a Time in the West', 'Game of Thrones', 'The Last Kingdom', 'Casino Royale', 'Crouching Tiger, Hidden Dragon', 'Aquaman']];
+
+const home= document.getElementById("page-home");
+const buttonReturn= document.getElementById("return");
+buttonReturn.style.display="none";
 const cardContainer = document.getElementById('card-container');
+
 const moods= document.getElementsByClassName("mood");
-let selectedMovies=[];
 let dataMoviesProperties={};
+let selectedMovies = [];
+
 
 const drawnCards = (movie) => {
   let card = `<div class="card">
@@ -24,14 +30,15 @@ const drawnCards = (movie) => {
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">${movie.title}<i class="material-icons right">close</i></span>
       <p>Director: ${movie.director}</p>
-      <p>Reparto: ${movie.actors}</p>
-      <p>Duración: ${movie.runTime}</p>
-      <h5>Sinopsis</h5>
+      <p>Cast: ${movie.actors}</p>
+      <p>Run time: ${movie.runTime}</p>
+      <h5>Synopsis</h5>
       <p>${movie.plot}.</p>
     </div>
   </div>`;
   cardContainer.insertAdjacentHTML("beforeend", card);
 };
+
 
 //Show List Data
 const showCards = (moviesList) => {
@@ -43,6 +50,8 @@ const showCards = (moviesList) => {
 
 for (let i=0; i<moods.length; i++){
     moods[i].addEventListener("click", ()=> {
+      home.style.display="none";
+      buttonReturn.style.display="block";
         const moodValue= parseInt(moods[i].value);
         const arraySelected=movieArrays[moodValue];
         selectedMovies = [];
@@ -72,6 +81,13 @@ const obtainDataJson = (title) => {
 const obtainMovies = (movieArraySelected) => {
   for(let i = 0; i < 2; i++){
     const movieTitle = window.data.randomMovies(movieArraySelected);
-    obtainDataJson(movieTitle)
+    obtainDataJson(movieTitle);
   }
 }
+
+const returning= document.getElementById("return");
+returning.addEventListener("click", ()=>{
+  home.style.display="block";
+  buttonReturn.style.display="none";
+  cardContainer.innerHTML = "";
+})
