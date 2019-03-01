@@ -1,0 +1,18 @@
+body{
+    background-color: #212121;
+}
+
+h5 {
+    color: white;
+}
+
+.card-content > button {
+    width: 100%;
+    height: 50px;  
+}
+
+.childish {
+    background-color: pink;
+    border-bottom-color: pink;
+}
+

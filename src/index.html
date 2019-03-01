@@ -14,43 +14,55 @@
 <header>
     <nav>
         <div class="nav-wrapper #e53935 red darken-2">
-          <a href="#" class="brand-logo">Moodvie</a>
+          <a href="#" class="brand-logo z-depth-5">MoodVie</a>
+          <form>
+                <div class="input-field">
+                  <input id="search" type="search" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <i class="material-icons">close</i>
+                </div>
+              </form>
         </div>
       </nav>
 </header>
 
+<div class="container">
+<div class="col s12 left">A movie for each mood</div>
+</div>
+
 
 <div class="container">
-
-
-<div id="page-home" class="row">
-        <div class="col s12">
-            <button class="btn-large mood" value=4>Me siento infantil</button>
-        </div>
-        <div class="col s12">
-            <button class="btn-large mood" value=5>Me siento intelectual</button>
-        </div>
-        <div class="col s12">
-            <button class="btn-large mood" value=6>Me siento intrépide</button>
-        </div>
-        <div class="col s12">
-            <button class="btn-large mood" value=0>Me siento enamorade</button>
-        </div>
-        <div class="col s12">
-            <button class="btn-large mood" value=1>Me siento divertide</button>
-        </div>
-        <div class="col s12">
-             <button class="btn-large mood" value=3>Me siento curiose</button>
-        </div>
-        <div class="col s12">
-            <button class="btn-large mood" value=2>Me siento valiente</button>
-        </div>
+    <h5 class="col s12 center-align">How do you feel today?</h5>
 </div>
+
+<div class="container" id="page-home">
+  <div class="col s12">
+        <div class="card #212121 grey darken-4 z-depth-4">
+                <div class="card-content">
+                    <button class="childish mood" value=4>Childish</button>
+                    <button class="mood" value=5>Intellectual<i class="material-icons">local_library</i></button>
+                    <button class="mood" value=6>Intrepid</button>
+                    <button class="mood" value=0>In love</button>
+                    <button class="mood" value=1>Playful<i class="material-icons">sentiment_very_satisfied</i></button>
+                    <button class="mood" value=2>Brave</button> 
+                </div>
+            </div>
+      </div>
+</div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m4 l4 offset-l4">
+      <div id="card-container">
+      </div>
+      <button id="return" class="btn-large">Mas opciones</button>
+    </div>
   </div>
-
-<div id="card-container" class="container">
 </div>
-<button id="return" class="btn-large">Mas opciones</button>
+
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
