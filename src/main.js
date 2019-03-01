@@ -7,14 +7,51 @@ const movieArrays= [
 ['The Cabinet of Dr. Caligari', 'Metropolis', 'The Battle of Algiers', 'M', 'Seven Samurai', 'The 400 Blows', 'The Wages of Fear', 'Open City', 'Tokyo Story', 'The Leopard', 'Battleship Potemkin', 'Au Hasard Balthazar', 'The Conformist', 'Let the Right One In', 'Playtime', 'Faces Places', 'Things to Come', 'Only Yesterday', 'Tampopo', 'Three Colors: Red'],
 ['Black Panther', 'Mad Max: Fury Road', 'King Kong', 'The Adventures of Robin Hood', 'Spider-Man: Homecoming', 'Seven Samurai', 'The Treasure of the Sierra Madre', 'Lawrence of Arabia', 'Captain America: Civil War', 'The Hurt Locker', 'Aliens', 'The Searchers', 'The Terminator', 'The African Queen', 'Once Upon a Time in the West', 'Game of Thrones', 'The Last Kingdom', 'Casino Royale', 'Crouching Tiger, Hidden Dragon', 'Aquaman']];
 
+const home= document.getElementById("page-home");
+const buttonReturn= document.getElementById("return");
+buttonReturn.style.display="none";
+const cardContainer = document.getElementById('card-container');
+
 const moods= document.getElementsByClassName("mood");
 let dataMoviesProperties={};
 let selectedMovies = [];
 
-const image= document.getElementById("image");
+
+const drawnCards = (movie) => {
+  let card = `<div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="${movie.poster}" alt="No Poster">
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">${movie.title}<i class="material-icons right">more_vert</i></span>
+      <p>${movie.year}</p>
+      <p><a href="${movie.website}">${movie.website}</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">${movie.title}<i class="material-icons right">close</i></span>
+      <p>Director: ${movie.director}</p>
+      <p>Cast: ${movie.actors}</p>
+      <p>Run time: ${movie.runTime}</p>
+      <h5>Synopsis</h5>
+      <p>${movie.plot}.</p>
+    </div>
+  </div>`;
+  cardContainer.insertAdjacentHTML("beforeend", card);
+};
+
+
+//Show List Data
+const showCards = (moviesList) => {
+  cardContainer.innerHTML = "";
+  moviesList.forEach(element => {
+    drawnCards(element);
+  });
+};
 
 for (let i=0; i<moods.length; i++){
     moods[i].addEventListener("click", ()=> {
+      home.style.display="none";
+      buttonReturn.style.display="block";
         const moodValue= parseInt(moods[i].value);
         const arraySelected=movieArrays[moodValue];
         selectedMovies = [];
@@ -22,24 +59,24 @@ for (let i=0; i<moods.length; i++){
     })
 }
 
-
 const obtainDataJson = (title) => {
-    fetch('http://www.omdbapi.com/?apikey=2227c3b4&t=' + title + '&type=movie&plot=full')
-        .then(response => response.json())
-        .then(dataMovies => {
-            console.log(dataMovies);
-            dataMoviesProperties= {
-                title: dataMovies.Title,
-                director: dataMovies.Director,
-                actors: dataMovies.Actors,
-                plot: dataMovies.Plot,
-                runTime: dataMovies.Runtime,
-                poster: dataMovies.Poster
-            };
-            selectedMovies.push(dataMoviesProperties);
-            })
-
-        }
+  fetch('http://www.omdbapi.com/?apikey=2227c3b4&t=' + title + '&type=movie&plot=full')
+    .then(response => response.json())
+    .then(dataMovies => {
+      dataMoviesProperties = {
+        title: dataMovies.Title,
+        director: dataMovies.Director,
+        actors: dataMovies.Actors,
+        plot: dataMovies.Plot,
+        runTime: dataMovies.Runtime,
+        poster: dataMovies.Poster,
+        year: dataMovies.Year,
+        website: dataMovies.Website
+      };
+      selectedMovies.push(dataMoviesProperties);
+      showCards(selectedMovies);
+    })
+}
 
 const obtainMovies = (movieArraySelected) => {
   for(let i = 0; i < 2; i++){
@@ -47,3 +84,10 @@ const obtainMovies = (movieArraySelected) => {
     obtainDataJson(movieTitle);
   }
 }
+
+const returning= document.getElementById("return");
+returning.addEventListener("click", ()=>{
+  home.style.display="block";
+  buttonReturn.style.display="none";
+  cardContainer.innerHTML = "";
+})
