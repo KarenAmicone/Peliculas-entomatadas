@@ -60,7 +60,7 @@ for (let i=0; i<moods.length; i++){
 }
 
 const obtainDataJson = (title) => {
-  fetch('http://www.omdbapi.com/?apikey=2227c3b4&t=' + title + '&type=movie&plot=full')
+  fetch('https://www.omdbapi.com/?apikey=2227c3b4&t=' + title + '&type=movie&plot=full')
     .then(response => response.json())
     .then(dataMovies => {
       dataMoviesProperties = {
