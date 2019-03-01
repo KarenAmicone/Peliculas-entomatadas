@@ -33,7 +33,7 @@ const drawnCards = (movie) => {
       <p>Cast: ${movie.actors}</p>
       <p>Run time: ${movie.runTime}</p>
       <h5>Synopsis</h5>
-      <p>${movie.plot}.</p>
+      <p style="text-align:justify;">${movie.plot}.</p>
     </div>
   </div>`;
   cardContainer.insertAdjacentHTML("beforeend", card);
