@@ -1,19 +1,23 @@
-const movieArrays= [
-['The lunchbox', 'Up in the air', 'Carol', 'The big sick', 'Casablanca', 'Her', 'Shakespeare in Love', 'About a boy', 'Before sunrise', 'The Hustler', 'The African Queen', 'The Artist', 'Your Name', 'Enough Said', 'Midnight in Paris', 'The Graduate', 'The Duke of Burgundy', 'Crazy Heart', 'Dave', 'Breathe In'],
-['Lady Bird', 'La la land', 'The Death of Stalin', 'Crazy Rich Asians', 'Sorry to Bother You', 'Bullets Over Broadway', 'Blindspotting', 'Old School', 'O Brother', 'The Heat', 'Game Night', 'Pulp Fiction', 'The Hangover', 'Dumb and Dumber', 'School of Rock', 'Hot Fuzz', 'The Breakfast Club', 'Burn After Reading', 'Bachelorette', 'The Birdcage'],
-['A Quiet Place', 'It Follows', 'Let the Right One In', 'The Cabin in the Woods', 'A Girl Walks Home Alone at Night', 'The Blair Witch Project', 'The Texas Chainsaw Massacre', 'Night of the Living Dead', 'Bone Tomahawk', 'The Shining', 'Get Out', 'Audition', 'The Thing', 'Evil Dead', 'Funny Games', 'Mulholland Dr.', 'Martyrs', 'The Orphanage', 'Suspiria', 'A Nightmare on Elm Street'],
-['The Prestige', 'The Game', 'The Kindergarten Teacher', 'The Silence of the Lambs', 'Twelve Monkeys', 'Black Swan', 'Oldboy', 'Primal Fear', 'Red Dragon', 'The Bone Collector', 'Border', 'Overlord', 'The House That Jack Built', 'Missing', 'Side Effects', 'Let Me In', 'The Imitation Game', 'Gerald’s Game', 'The Gift', 'Raw'],
-['The Wizard of Oz', 'Inside Out', 'E.T. The Extra-Terrestrial','Coco', 'Paddington 2', 'Incredibles 2', 'Snow White and the Seven Dwarfs', 'Toy Story 2', 'Up', 'Toy Story 3', 'Finding Nemo', 'Pinocchio', 'Toy Story', 'Mary Poppins', 'How to Train Your Dragon', 'The Incredibles', 'My Life as a Zucchini', 'Song Of The Sea', 'About Elly', 'Spirited Away', '101 Dalmatians'],
-['The Cabinet of Dr. Caligari', 'Metropolis', 'The Battle of Algiers', 'M', 'Seven Samurai', 'The 400 Blows', 'The Wages of Fear', 'Open City', 'Tokyo Story', 'The Leopard', 'Battleship Potemkin', 'Au Hasard Balthazar', 'The Conformist', 'Let the Right One In', 'Playtime', 'Faces Places', 'Things to Come', 'Only Yesterday', 'Tampopo', 'Three Colors: Red'],
-['Black Panther', 'Mad Max: Fury Road', 'King Kong', 'The Adventures of Robin Hood', 'Spider-Man: Homecoming', 'Seven Samurai', 'The Treasure of the Sierra Madre', 'Lawrence of Arabia', 'Captain America: Civil War', 'The Hurt Locker', 'Aliens', 'The Searchers', 'The Terminator', 'The African Queen', 'Once Upon a Time in the West', 'Game of Thrones', 'The Last Kingdom', 'Casino Royale', 'Crouching Tiger, Hidden Dragon', 'Aquaman']];
+const movieArrays = [
+  ['The lunchbox', 'Up in the air', 'Carol', 'The big sick', 'Casablanca', 'Her', 'Shakespeare in Love', 'About a boy', 'Before sunrise', 'The Hustler', 'The African Queen', 'The Artist', 'Your Name', 'Enough Said', 'Midnight in Paris', 'The Graduate', 'The Duke of Burgundy', 'Crazy Heart', 'Dave', 'Breathe In', 'In the Mood for Love', 'The Curious Case of Benjamin Button', 'The Reader', 'Atonement', 'The Theory of Everything'],
+  ['Lady Bird', 'La la land', 'The Death of Stalin', 'Crazy Rich Asians', 'Sorry to Bother You', 'Bullets Over Broadway', 'Blindspotting', 'Old School', 'O Brother', 'The Heat', 'Game Night', 'Pulp Fiction', 'The Hangover', 'Dumb and Dumber', 'School of Rock', 'Hot Fuzz', 'The Breakfast Club', 'Burn After Reading', 'Bachelorette', 'The Birdcage', 'Happy Gilmore', 'Ace Ventura: Pet Detective', 'Shaun of the Dead', 'Zombieland'],
+  ['A Quiet Place', 'It Follows', 'Let the Right One In', 'The Cabin in the Woods', 'A Girl Walks Home Alone at Night', 'The Blair Witch Project', 'The Texas Chainsaw Massacre', 'Night of the Living Dead', 'Bone Tomahawk', 'The Shining', 'Get Out', 'Audition', 'The Thing', 'Evil Dead', 'Funny Games', 'Mulholland Dr.', 'Martyrs', 'The Orphanage', 'Suspiria', 'A Nightmare on Elm Street', 'Hereditary', 'Halloween', 'Climax', 'Annihilation', 'Berlin Syndrome'],
+  ['The Prestige', 'The Game', 'The Kindergarten Teacher', 'The Silence of the Lambs', 'Twelve Monkeys', 'Black Swan', 'Oldboy', 'Primal Fear', 'Red Dragon', 'The Bone Collector', 'Border', 'Overlord', 'The House That Jack Built', 'Missing', 'Side Effects', 'Let Me In', 'The Imitation Game', 'Gerald’s Game', 'The Gift', 'Raw', 'A Separation', 'Chinatown', 'The Usual Suspects', 'The Hateful Eight', 'Mystic River'],
+  ['The Wizard of Oz', 'Inside Out', 'E.T. The Extra-Terrestrial', 'Coco', 'Paddington 2', 'Incredibles 2', 'Snow White and the Seven Dwarfs', 'Toy Story 2', 'Up', 'Toy Story 3', 'Finding Nemo', 'Pinocchio', 'Toy Story', 'Mary Poppins', 'How to Train Your Dragon', 'The Incredibles', 'My Life as a Zucchini', 'Song Of The Sea', 'About Elly', 'Spirited Away', '101 Dalmatians', 'Moana', 'Isle of Dogs', 'Kubo and the Two Strings', 'Monsters University', 'Persépolis'],
+  ['The Cabinet of Dr. Caligari', 'Metropolis', 'The Battle of Algiers', 'M', 'Seven Samurai', 'The 400 Blows', 'The Wages of Fear', 'Open City', 'Tokyo Story', 'The Leopard', 'Battleship Potemkin', 'Au Hasard Balthazar', 'The Conformist', 'Let the Right One In', 'Playtime', 'Faces Places', 'Things to Come', 'Only Yesterday', 'Tampopo', 'Three Colors: Red', 'Elevator to the Gallows', 'Watership Down', 'Being There', 'Pollock', 'Downtown 81'],
+  ['Black Panther', 'Mad Max: Fury Road', 'King Kong', 'The Adventures of Robin Hood', 'Spider-Man: Homecoming', 'Seven Samurai', 'The Treasure of the Sierra Madre', 'Lawrence of Arabia', 'Captain America: Civil War', 'The Hurt Locker', 'Aliens', 'The Searchers', 'The Terminator', 'The African Queen', 'Once Upon a Time in the West', 'Game of Thrones', 'The Last Kingdom', 'Casino Royale', 'Crouching Tiger, Hidden Dragon', 'Aquaman', 'Deadpool', 'Baby Driver', 'Ronin', 'Deep Blue Sea', 'Never Die Alone'],
+  ['The%20Hitchhiker%27s%20Guide%20to%20the%20Galaxy', 'Cloud Atlas', 'The Matrix', 'Inception', 'Looper', 'Chronicle', 'Titan A.E.', 'Rise of the Planet of the Apes', 'The Box', 'Repo Men', 'The Hunger Games', 'Back to the Future', 'Cloverfield', 'Star Trek', 'Ghostbusters', 'Star Wars', 'The Fifth Element', 'Starship Troopers', 'Total Recall', 'The Book of Eli', 'High Life', 'Advantageous', 'Creation of the Humanoids', 'Upstream Color', 'Alien Raiders']
+];
 
-const home= document.getElementById("page-home");
-const buttonReturn= document.getElementById("return");
-buttonReturn.style.display="none";
+const home = document.getElementById("page-home");
+const buttonReturn = document.getElementById("return");
+buttonReturn.style.display = "none";
 const cardContainer = document.getElementById('card-container');
 
-const moods= document.getElementsByClassName("mood");
-let dataMoviesProperties={};
+const search = document.getElementById('search');
+
+const moods = document.getElementsByClassName("mood");
+let dataMoviesProperties = {};
 let selectedMovies = [];
 
 
@@ -22,7 +26,7 @@ const drawnCards = (movie) => {
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="${movie.poster}" alt="No Poster">
     </div>
-    <div class="card-content">
+    <div class="card-content size">
       <span class="card-title activator grey-text text-darken-4">${movie.title}<i class="material-icons right">more_vert</i></span>
       <p>${movie.year}</p>
       <p><a href="${movie.website}">${movie.website}</a></p>
@@ -48,15 +52,16 @@ const showCards = (moviesList) => {
   });
 };
 
-for (let i=0; i<moods.length; i++){
-    moods[i].addEventListener("click", ()=> {
-      home.style.display="none";
-      buttonReturn.style.display="block";
-        const moodValue= parseInt(moods[i].value);
-        const arraySelected=movieArrays[moodValue];
-        selectedMovies = [];
-        obtainMovies(arraySelected);
-    })
+for (let i = 0; i < moods.length; i++) {
+  moods[i].addEventListener("click", () => {
+    home.style.display = "none";
+    cardContainer.style.display = "block";
+    buttonReturn.style.display = "block";
+    const moodValue = parseInt(moods[i].value);
+    const arraySelected = movieArrays[moodValue];
+    selectedMovies = [];
+    obtainMovies(arraySelected);
+  })
 }
 
 const obtainDataJson = (title) => {
@@ -78,16 +83,46 @@ const obtainDataJson = (title) => {
     })
 }
 
+const searchMovieJson = (title) => {
+  fetch('https://www.omdbapi.com/?apikey=2227c3b4&s=' + title + '&type=movie&plot=full')
+    .then(responseSearch => responseSearch.json())
+    .then(dataMoviesSearch => {
+      if (dataMoviesSearch.Search.length != 0) {
+        dataMoviesSearch.Search.forEach(element => {
+          obtainDataJson(element.Title);
+        });
+      }
+    })
+    .catch(error => {
+      console.log(error);
+      home.style.display = "block";
+      cardContainer.style.display = "none";
+      buttonReturn.style.display = "none";
+    })
+}
+
 const obtainMovies = (movieArraySelected) => {
-  for(let i = 0; i < 2; i++){
+  for (let i = 0; i < 2; i++) {
     const movieTitle = window.data.randomMovies(movieArraySelected);
     obtainDataJson(movieTitle);
   }
 }
 
-const returning= document.getElementById("return");
-returning.addEventListener("click", ()=>{
-  home.style.display="block";
-  buttonReturn.style.display="none";
+const returning = document.getElementById("return");
+returning.addEventListener("click", () => {
+  home.style.display = "block";
+  buttonReturn.style.display = "none";
   cardContainer.innerHTML = "";
 })
+
+search.addEventListener('blur', () => {
+  let movieToSearch = search.value;
+  if (movieToSearch.length != 0) {
+    selectedMovies = [];
+    searchMovieJson(movieToSearch);
+    home.style.display = "none";
+    cardContainer.style.display = "block";
+    buttonReturn.style.display = "block";
+    search.value = "";
+  }
+});
