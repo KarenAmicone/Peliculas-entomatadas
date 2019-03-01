@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Moodvie</title>
@@ -8,15 +7,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Laila%7CPoppins" rel="stylesheet">
 </head>
-
 <body>
 <header>
     <nav>
-        <div class="nav-wrapper #e53935 red darken-2">
-          <a href="#" class="brand-logo z-depth-5">MoodVie</a>
+        <div class="nav-wrapper #BE4743">
+          <a href="#" class="brand-logo left"><img class="pop-corn-logo" src="assets/images/palomitas-de-maiz-logo.png" alt="pop-corn">Moodvie</a>
           <form>
-                <div class="input-field">
+                <div class="input-field right">
                   <input id="search" type="search" required>
                   <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                   <i class="material-icons">close</i>
@@ -25,49 +24,37 @@
         </div>
       </nav>
 </header>
-
 <div class="container">
-<div class="col s12 left">A movie for each mood</div>
+  <div class="slogan-movie col s12 center-align">
+    <h2>A movie for each mood</h2>
+  </div>
 </div>
-
-<div class= "container">
-    Welcome to MoodVie 
-</div>
-
-
 <div class="container">
     <h5 class="col s12 center-align">How do you feel today?</h5>
 </div>
-
 <div class="container" id="page-home">
   <div class="col s12">
-        <div class="card #212121 grey darken-4 z-depth-4">
-                <div class="card-content">
-                    <button class="childish mood" value=4>Childish</button>
-                    <button class="mood" value=5>Intellectual<i class="material-icons">local_library</i></button>
-                    <button class="mood" value=6>Intrepid</button>
-                    <button class="mood" value=0>In love</button>
-                    <button class="mood" value=1>Playful<i class="material-icons">sentiment_very_satisfied</i></button>
-                    <button class="mood" value=2>Brave</button> 
-                </div>
-            </div>
+      <div class="card-content">
+        <button class="childish mood" value=4></button>
+        <button class="intellectual mood" value=5></button>
+        <button class="intrepid mood" value=6></button>
+        <button class="in-love mood" value=0></button>
+        <button class="playful mood" value=1></button>
+        <button class="fearless mood" value=2></button>
+        <button class="mysterious mood" value=3></button>
+        <button class="futuristic mood" value=7></button>
       </div>
+    </div>
 </div>
-
-
 <div class="container">
   <div class="row">
-    <div class="col s12 m4 l4 offset-l4">
+    <div class="col s12 m8 offset-m2 l4 offset-l4">
       <div id="card-container">
       </div>
-      <button id="return" class="btn-large">Mas opciones</button>
+        <a id= "return" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_back</i></a>
     </div>
   </div>
 </div>
-
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
