@@ -14,11 +14,21 @@
 ¡Una película para cada estado de ánimo!
 
 Somos una Web App de recomendación de películas.
-En Moods&Movies nos encargamos de que tu selección de películas sea fácil y rápida, con nuestras sugerencias de películas con base a tu estado de ánimo. Te            recomendamos películas de forma aleatoria, por lo que cada que vez que nos         visites, recibirás recomendaciones distintas. 
+En Moodvie nos encargamos de que tu elección de película sea fácil y rápida, para eso te sugerimos las películas con base a tu estado de ánimo.
+
+## Preámbulo
+
+El mercado cinematográfico ofrece múltiples opciones a los consumidores, ya sean apasionados del cine o consumidores ocasionales.
+
+Actualmente los servicios de streaming se posicionan en el mercado como una de las opciones preferidas para el consumo de películas.
+Específicamente Netflix dice que el 45% del total del consumo en la plataforma se realiza desde Latinoamérica.
+Por ello no nos sorprenden los datos sobre el consumo de la plataforma en 2017, donde colocan a México como el país número uno  con el mayor número de miembros que ve Netflix todos los días.
+
+Se estima que el catálogo de películas de Netflix es de 4010 películas de diversos géneros; entre toda esta oferta puede llegar a ser tardada e incluso complicada la elección de película para los consumidores.
 
 ## Primera iteración
 
-En nuestro primer sprint decidimos crear una Web App para jóvenes-adultos (personas de 25 a 40 años), que al terminar su jornada de trabajo desean ver una película en la comodidad de su casa y no quieren demorarse mucho en la selección de la película. Por lo tanto ideamos un producto que mostrara las películas mejor rankeadas por Rotten Tomatoes y también ofrecer a nuestros usuarios la opción de obtener sugerencias de películas con base a su estado de ánimo.
+En nuestro primer sprint decidimos crear una Web App para jóvenes-adultos (personas de 25 a 40 años), que al terminar su jornada de trabajo desean ver una película en la comodidad de su casa y no quieren demorarse mucho en la elección de la película. Por lo tanto ideamos un producto que mostrara las películas mejor rankeadas por Rotten Tomatoes y también ofrecer a nuestros usuarios la opción de obtener sugerencias de películas con base a su estado de ánimo.
 
 Con base a nuestras encuestas descubrimos que en general nuestro usuario.
 - Visualiza películas en línea de 1 a 2 veces entre semana.
@@ -70,6 +80,47 @@ Por lo que nuestro nuevo producto quedó de la siguiente forma:
 ![Prototipo 2](./src/assets/images/pelis1.1.png)
 
 https://marvelapp.com/43d458a
+
+Este prototipo fue puesto aprueba con expertos en la materia que nos sugirieron lo siguiente:
+
+- Utilizar un nombre que fuese más rápido de pronunciar.
+- Permitir que el usuario acceda rápidamente a lo que le interesa.
+
+Por lo que antes de salir a testear el prototipo con los usuarios se realizaron nuevamente cambios en el nombre de producto y se eliminó la página de inicio, reemplazándola por una página de carga.
+
+Siendo el siguiente prototipo testeado:
+
+![Prototipo 3](./src/assets/images/pelis2.png)
+![Prototipo 3](./src/assets/images/pelis2.1.png)
+
+
+https://marvelapp.com/8791j2i
+
+Se realizaron 8 encuestas, donde 5 de ellas fueron contestadas por mujeres y 3 por hombres. Teniendo como resultado lo siguiente:
+
+![Encuesta 2](./src/assets/images/pruebas-usuarios2.png)
+
+También se realizaron encuestas a través de Google forms acerca de la relación entre la frase de estado de ánimo y el género de las películas.
+
+![Encuesta 2](./src/assets/images/encuesta-2.png)
+![Encuesta 2](./src/assets/images/encuesta-2.1.png)
+![Encuesta 2](./src/assets/images/encuesta-2.2.png)
+![Encuesta 2](./src/assets/images/encuesta-2.3.png)
+![Encuesta 2](./src/assets/images/encuesta-2.4.png)
+![Encuesta 2](./src/assets/images/encuesta-2.5.png)
+![Encuesta 2](./src/assets/images/encuesta-2.6.png)
+![Encuesta 2](./src/assets/images/encuesta-2.7.png)
+![Encuesta 2](./src/assets/images/encuesta-2.8.png)
+
+Para la elección de colores se realizaron 12 encuestas con las siguientes muestras:
+
+![color](./src/assets/images/prueba-color.png)
+![color](./src/assets/images/prueba-color2.png)
+![color](./src/assets/images/prueba-color3.png).
+
+Al realizar las encuestas de color se obtuvieron resultados iguales, 4 votos para cada muestra. Por lo que se escogió el tono rojo, ya que nos ayuda a que el usuario asocie la aplicación con las películas.
+
+Se realizarán las pruebas de usabilidad con el producto en funcionamiento...
 
 
 
