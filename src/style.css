@@ -3,15 +3,24 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
+
 .nav-wrapper {
     font-family: 'Poppins', bold;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr
 }
 
-.pop-corn-logo {
-    width: 10%;
-    height: 10%;
+form{
+    grid-column: 2/3;
+}
 
+.logo-container{
+    grid-column: 1/2;
+}
+
+.pop-corn-logo{
+    height: 45px;
+    margin-top: 4px;
 }
 
 
@@ -108,4 +117,12 @@ h2, h5 {
 
 .size{
     height: 2%;
+}
+
+#return{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    cursor: pointer;     
 }
