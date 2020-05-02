@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Moodvie</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale= 1.0, minimum-scale= 1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Laila%7CPoppins" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Moodvie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale= 1.0, minimum-scale= 1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Laila%7CPoppins" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<header>
-    <nav>
-        <div class="nav-wrapper #BE4743">
-          <article class="logo-container">
-            <a href="#" class="brand-logo left"><img class="pop-corn-logo" src="assets/images/palomitas-de-maiz-logo.png" alt="pop-corn">Moodvie</a>
-          </article>
-          <form>
-                <div class="input-field right">
-                  <input id="search" type="search" required>
-                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                  <i class="material-icons">close</i>
-                </div>
-              </form>
+  <header>
+
+    <div class="nav">
+      <div class="logo-container">
+        <a href="#" class="brand-logo left" id="logo-bttn"><img class="pop-corn-logo"
+            src="assets/images/palomitas-de-maiz-logo.png" alt="pop-corn"></a>
+      </div>
+      <p class="page-name">Moodvie</p>
+      <form>
+        <div class="input-search">
+          <input id="search" placeholder="Search by name">
         </div>
-      </nav>
-</header>
-<div class="container">
-  <div class="slogan-movie col s12 center-align">
-    <h2>A movie for each mood</h2>
-  </div>
-</div>
-<div class="container">
-    <h5 class="col s12 center-align">How do you feel today?</h5>
-</div>
-<div class="container" id="page-home">
-  <div class="col s12">
-      <div class="card-content">
-        <button class="childish mood" value=4></button>
-        <button class="intellectual mood" value=5></button>
-        <button class="intrepid mood" value=6></button>
-        <button class="in-love mood" value=0></button>
-        <button class="playful mood" value=1></button>
-        <button class="fearless mood" value=2></button>
-        <button class="mysterious mood" value=3></button>
-        <button class="futuristic mood" value=7></button>
+        <button id="look-for-it">Enter</button>
+      </form>
+    </div>
+
+  </header>
+  <article class="home" id="home">
+    <div class="slogan-movie">
+      <h1>A movie for each mood</h1>
+    </div>
+    <div class="subtitle">
+      <h5>How do you feel today?</h5>
+    </div>
+    <div class="page-home" id="page-home">
+      <div class="card-content-1">
+        <button class="childish mood" value=4>CHILDISH</button>
+        <button class="intellectual mood" value=5>INTELLECTUAL</button>
+        <button class="intrepid mood" value=6>INTREPID</button>
+        <button class="in-love mood" value=0>IN LOVE</button>
+        <button class="playful mood" value=1>PLAYFUL</button>
+        <button class="fearless mood" value=2>FEARLESS</button>
+        <button class="mysterious mood" value=3>MYSTERIOUS</button>
+        <button class="futuristic mood" value=7>FUTURISTIC</button>
       </div>
     </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col s12 m8 offset-m2 l4 offset-l4">
-      <div id="card-container">
-      </div>
-        <a id= "return" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">arrow_back</i></a>
-    </div>
-  </div>
-</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+  </article>
+
+  <article class="movies-container">
+    <div id="card-container"></div>
+    <a id="return" class="btn-floating btn-large waves-effect waves-light red"><i
+        class="material-icons">arrow_back</i></a>
+  </article>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
